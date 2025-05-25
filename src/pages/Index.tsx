@@ -371,7 +371,7 @@ const Index = () => {
           <img
             src="/imgs/molevillage.png"
             alt=""
-            className="w-screen h-[600px]"
+            className="w-screen h-[400px] md:h-[600px]"
           />
         </div>
       </section>
@@ -772,12 +772,12 @@ const Index = () => {
                 >
                   Whitepaper
                 </a>
-                {/* <a href="#" className="text-sm text-gray-300 hover:text-white">
-                  FAQ
+                <a href="#team" className="text-sm text-gray-300 hover:text-white">
+                  Team
                 </a>
-                <a href="#" className="text-sm text-gray-300 hover:text-white">
-                  Blog
-                </a> */}
+                <a href="https://drive.google.com/file/d/1QHywlp_Kzrjmxk9S7B82eCadw7asSBXw/view?usp=sharing" className="text-sm text-gray-300 hover:text-white">
+                  Audit
+                </a>
               </div>
             </div>
             <div>
@@ -820,29 +820,6 @@ const Index = () => {
                     </svg>
                   </Button>
                 </a>
-
-                <Button
-                  variant="outline"
-                  size="icon"
-                  className="rounded-full border-white/20 text-white bg-white/10"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    fill="currentColor"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm.003 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 7.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
-                  </svg>
-                </Button>
-                <Button
-                  variant="outline"
-                  size="icon"
-                  className="rounded-full border-white/20 text-white bg-white/10"
-                >
-                  <MessageCircle className="h-5 w-5" />
-                </Button>
               </div>
             </div>
           </div>

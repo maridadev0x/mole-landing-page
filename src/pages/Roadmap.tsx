@@ -158,7 +158,7 @@ export const Roadmap = () => {
                         <div className={`p-3 rounded-lg bg-gradient-to-r ${
                           item.completed 
                             ? 'from-green-500 to-emerald-500' 
-                            : 'from-gray-500 to-gray-500'
+                            : 'from-purple-500 to-blue-500'
                         } shadow-lg group-hover:shadow-xl transition-shadow duration-300`}>
                           <item.icon className="w-6 h-6 text-white" />
                         </div>

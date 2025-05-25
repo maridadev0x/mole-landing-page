@@ -33,7 +33,11 @@ const Header = () => {
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-5">
-          <img src="/imgs/logo.png" alt="logo" className="w-16 xs:w-20 md:w-24"/>
+          <img
+            src="/imgs/logo.png"
+            alt="logo"
+            className="w-16 xs:w-20 md:w-24"
+          />
         </Link>
 
         {/* Desktop Navigation */}
@@ -62,12 +66,12 @@ const Header = () => {
           >
             Partners
           </a>
-          <a
+          {/* <a
             href="#features"
             className="font-medium hover:text-game-blue transition-colors"
           >
             Features
-          </a>
+          </a> */}
           <a
             href="https://drive.google.com/file/d/1wuoOcLT33dwRf-_O-BF32wH34665K7iE/view?usp=sharing"
             className="font-medium hover:text-game-blue transition-colors"
@@ -126,12 +130,18 @@ const Header = () => {
             >
               Partners
             </a>
-            <a
+            {/* <a
               href="#features"
               className="font-medium hover:text-game-blue transition-colors py-2 border-b"
               onClick={() => setMobileMenuOpen(false)}
             >
               Features
+            </a> */}
+            <a
+              href="https://drive.google.com/file/d/1wuoOcLT33dwRf-_O-BF32wH34665K7iE/view?usp=sharing"
+              className="font-medium hover:text-game-blue transition-colors py-2 border-b" target="_blank"
+            >
+              Whitepaper
             </a>
             <Button
               onClick={() => {
