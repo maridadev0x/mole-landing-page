@@ -68,6 +68,12 @@ const Header = () => {
           >
             Features
           </a>
+          <a
+            href="https://drive.google.com/file/d/1wuoOcLT33dwRf-_O-BF32wH34665K7iE/view?usp=sharing"
+            className="font-medium hover:text-game-blue transition-colors"
+          >
+            Whitepaper
+          </a>
           <Button
             onClick={handleOpenTelegram}
             className="flex items-center bg-game-blue hover:bg-game-blue/80"

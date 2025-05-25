@@ -3,6 +3,7 @@ import GameButton from "@/components/GameButton";
 import FeatureCard from "@/components/FeatureCard";
 import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
+import { Roadmap } from "./Roadmap";
 import {
   Play,
   Star,
@@ -37,6 +38,7 @@ interface VestingInfo {
   percentage: string;
   timeline: string;
   description: string;
+  amount: string;
   color: string;
 }
 
@@ -44,7 +46,7 @@ interface VestingInfo {
 interface Partner {
   name: string;
   logo: string;
-  type: "VC" | "Partner";
+  type: "Investor" | "Partner";
 }
 
 const Index = () => {
@@ -59,48 +61,52 @@ const Index = () => {
     {
       name: "John Garner",
       role: "CTO - SoftSix",
-      image: "/imgs/John_Garner.jpg",
+      image: "/imgs/molecom.png",
     },
     {
       name: "Tom Gilbert",
       role: "CMO - Alpha Blockchain",
-      image: "/imgs/Tom_Gilbert.jpg",
+      image: "/imgs/mole1.png",
     },
     {
       name: "TRAN TUAN",
       role: "CEO - CJD Tech",
-      image: "/imgs/TRAN_TUAN.jpg",
+      image: "/imgs/mole2.png",
     },
   ];
 
   // Vesting schedule data
   const vestingSchedule: VestingInfo[] = [
     {
-      phase: "Seed Round",
-      percentage: "15%",
-      timeline: "6 months cliff, 18 months linear vesting",
-      description: "Initial investors and early supporters",
+      phase: "Gameplay Rewards",
+      percentage: "60%",
+      amount: "6,000,000,000",
+      timeline: "TGE Unlock		",
+      description: "Allocated to players earning MOLE tokens through in-game achievements and milestones.",
       color: "border-red-500",
     },
     {
-      phase: "Private Sale",
-      percentage: "25%",
-      timeline: "3 months cliff, 12 months linear vesting",
-      description: "Strategic partners and institutional investors",
+      phase: "Community Incentives",
+      percentage: "15%",
+      amount: "1,500,000,000",
+      timeline: "TGE Unlock	",
+      description: "Supports community growth through events, contests, and collaborations.",
       color: "border-blue-500",
     },
     {
-      phase: "Public Sale",
-      percentage: "10%",
-      timeline: "No cliff, 6 months linear vesting",
-      description: "Community and public participants",
+      phase: "Community and public participants",
+      percentage: "15%",
+      amount: "1,500,000,000",
+      timeline: "TGE (+16M)	",
+      description: "Ensures ongoing game development, updates, and ecosystem enhancements.",
       color: "border-green-500",
     },
     {
-      phase: "Team & Advisors",
-      percentage: "20%",
-      timeline: "12 months cliff, 24 months linear vesting",
-      description: "Core team members and advisors allocation",
+      phase: "Liquidity & Exchange Listings",
+      percentage: "10%",
+      amount: "1,000,000,000",
+      timeline: "TGE Unlock		",
+      description: "Secures partnerships with centralized and decentralized exchanges for token accessibility.",
       color: "border-yellow-500",
     },
   ];
@@ -110,43 +116,38 @@ const Index = () => {
     {
       name: "milk-alliance",
       logo: "/imgs/milk-alliance.png",
-      type: "VC",
+      type: "Partner",
     },
     {
       name: "bnb",
       logo: "/imgs/bnb.png",
-      type: "VC",
+      type: "Partner",
     },
     {
       name: "airian",
       logo: "/imgs/airian.png",
-      type: "VC",
+      type: "Partner",
     },
     {
       name: "myro",
       logo: "/imgs/myro.png",
-      type: "VC",
+      type: "Partner",
     },
     {
       name: "playdapp",
       logo: "/imgs/playdapp.png",
-      type: "VC",
+      type: "Partner",
     },
-    // {
-    //   name: "Blockchain Alliance",
-    //   logo: "/imgs/avar10.jpg",
-    //   type: "Partner",
-    // },
-    // {
-    //   name: "Telegram Games",
-    //   logo: "/imgs/avar11.jpg",
-    //   type: "Partner",
-    // },
-    // {
-    //   name: "Blockchain Alliance",
-    //   logo: "/imgs/avar4.jpg",
-    //   type: "Partner",
-    // },
+    {
+      name: "IronblockVentures",
+      logo: "/imgs/ironblock.png",
+      type: "Investor",
+    },
+    {
+      name: "Redbrick",
+      logo: "/imgs/redbrick.png",
+      type: "Investor",
+    },
   ];
 
   useEffect(() => {
@@ -273,7 +274,7 @@ const Index = () => {
       <section className="pt-16 bg-[#f3d2b8]/50" id="tokenomics">
         <div className="container mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-            $MOLE Token Metrics
+            $MOLE Tokenomics
           </h2>
           <p className="text-xl text-center text-gray-600 mb-12 lg:max-w-3xl mx-auto">
             The native utility token powering the MoleSmash ecosystem on Binance
@@ -309,7 +310,7 @@ const Index = () => {
             </div>
 
             <div className="">
-              <img src="/imgs/molecom.png" alt="" className="" />
+              <img src="/imgs/mole5.png" alt="" className="" />
             </div>
 
             <div className="bg-white p-3 sm:p-6 rounded-2xl py-10 shadow-lg border-2 border-game-green">
@@ -324,7 +325,7 @@ const Index = () => {
             </div>
 
             <div className="">
-              <img src="/imgs/molebike.png" alt="" className="" />
+              <img src="/imgs/mole4.png" alt="" className="" />
             </div>
 
             <div className="bg-white p-6 rounded-2xl py-10 shadow-lg border-2 border-game-yellow">
@@ -344,7 +345,7 @@ const Index = () => {
               <img src="/imgs/molespace.png" alt="" className="" />
             </div>
           </div>
-
+{/* 
           <div className="mt-20 mx-auto bg-white/90 p-10 rounded-2xl">
             <h3 className="text-2xl sm:text-4xl font-bold mb-8 text-center">
               Token Allocation Categories
@@ -357,13 +358,13 @@ const Index = () => {
                 Community Incentives: 15%
               </div>
               <div className="bg-game-green text-white px-4 py-4 rounded-full">
-                Development & Investor : 15%
+                "Development Fund & Investor " : 15%
               </div>
               <div className="bg-game-yellow text-black px-4 py-4 rounded-full">
                 Liquidity & Exchange Listings: 10%
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="mt-6">
@@ -398,7 +399,7 @@ const Index = () => {
                   <h3 className="text-xl font-bold">{item.phase}</h3>
                 </div>
                 <div className="flex justify-between items-center mb-3">
-                  <span className="font-bold text-lg">{item.percentage}</span>
+                  <span className="font-bold text-lg">{item.percentage}&nbsp;({item.amount})</span>
                   <span className="text-sm bg-game-blue/10 text-game-blue px-3 py-1 rounded-full">
                     {item.timeline}
                   </span>
@@ -422,38 +423,32 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <FeatureCard
-              image="/imgs/mole1.png"
               icon={<Gamepad className="w-12 h-12 text-game-blue" />}
               title="In-Game Rewards"
               description="Earn $MOLE tokens by playing the game, completing daily missions, and smashing moles."
             />
             <FeatureCard
-              image="/imgs/mole2.png"
               icon={<ChartPie className="w-12 h-12 text-game-red" />}
               title="Prediction Markets"
               description="Use $MOLE tokens to participate in the MOLE Predictor markets and win more tokens."
               color="bg-white"
             />
             <FeatureCard
-              image="/imgs/mole3.png"
               icon={<TrendingUp className="w-12 h-12 text-game-green" />}
               title="Staking Rewards"
               description="Stake your $MOLE tokens to earn passive income and unlock premium game features."
             />
             <FeatureCard
-              image="/imgs/mole4.png"
               icon={<WalletCards className="w-12 h-12 text-game-yellow" />}
               title="Governance"
               description="Vote on game development decisions and ecosystem proposals using your $MOLE holdings."
             />
             <FeatureCard
-              image="/imgs/mole5.png"
               icon={<Trophy className="w-12 h-12 text-game-purple" />}
               title="Tournament Entry"
               description="Use $MOLE tokens to enter special tournaments with larger prize pools and rare rewards."
             />
             <FeatureCard
-              image="/imgs/mole6.png"
               icon={<Handshake className="w-12 h-12 text-black" />}
               title="Binance Ecosystem Integration"
               description="Seamlessly interact with other Binance ecosystem projects and services using $MOLE."
@@ -508,12 +503,12 @@ const Index = () => {
           </p>
 
           <div className="mb-12">
-            {/* <h3 className="text-2xl font-bold mb-8 text-center">
-              Venture Capital Partners
-            </h3> */}
+            <h3 className="text-2xl font-bold mb-8 text-center">
+              Partners
+            </h3>
             <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-5 gap-8">
               {partners
-                .filter((p) => p.type === "VC")
+                .filter((p) => p.type === "Partner")
                 .map((partner, index) => (
                   <div
                     key={index}
@@ -530,43 +525,28 @@ const Index = () => {
             </div>
           </div>
 
-          {/* <div>
+          <div>
             <h3 className="text-2xl font-bold mb-8 text-center">
-              Strategic Partners
+              Investors
             </h3>
-            <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-8">
-              {teamMembers.map((member, index) => (
-                <div key={index} className="bg-white p-6 rounded-2xl shadow-lg text-center hover:shadow-xl transition-all duration-300">
-                  <div className="w-24 h-24 mx-auto rounded-full overflow-hidden mb-4 bg-gray-200">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                  <p className="text-game-blue">{member.role}</p>
-                </div>
-              ))}
-            </div>
-            {/* <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-2 gap-10 xm:gap-20 max-w-[700px] mx-auto">
               {partners
-                .filter((p) => p.type === "Partner")
+                .filter((p) => p.type === "Investor")
                 .map((partner, index) => (
                   <div
                     key={index}
-                    className="bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center justify-center aspect-square"
+                    className="bg-white p-12  rounded-2xl shadow-lg flex flex-col items-center justify-center"
                   >
                     <img
                       src={partner.logo}
                       alt={partner.name}
-                      className="w-24 h-24 mb-4 rounded-full"
+                      className="w-32 h-32 mb-4 rounded-md"
                     />
                     <h4 className="font-bold text-center">{partner.name}</h4>
                   </div>
                 ))}
             </div>
-          </div> */}
+          </div>
         </div>
       </section>
 
@@ -646,6 +626,13 @@ const Index = () => {
               description="Invite friends to earn a percentage of their $MOLE token earnings forever."
             /> */}
           </div>
+        </div>
+      </section>
+
+      {/* Roadmap Section */}
+      <section className="bg-[#f3d2b8]/50" id="features">
+        <div className="container mx-auto px-4 py-16">
+          <Roadmap />
         </div>
       </section>
 
@@ -779,50 +766,61 @@ const Index = () => {
                 >
                   Partners
                 </a>
-                <a href="#" className="text-sm text-gray-300 hover:text-white">
+                <a
+                  href="https://drive.google.com/file/d/1wuoOcLT33dwRf-_O-BF32wH34665K7iE/view?usp=sharing"
+                  className="text-sm text-gray-300 hover:text-white"
+                >
                   Whitepaper
                 </a>
-                <a href="#" className="text-sm text-gray-300 hover:text-white">
+                {/* <a href="#" className="text-sm text-gray-300 hover:text-white">
                   FAQ
                 </a>
                 <a href="#" className="text-sm text-gray-300 hover:text-white">
                   Blog
-                </a>
+                </a> */}
               </div>
             </div>
             <div>
               <h3 className="font-bold mb-4">Connect With Us</h3>
               <div className="flex gap-4">
-                <Button
-                  variant="outline"
-                  size="icon"
-                  className="rounded-full border-white/20 text-white bg-white/10"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    fill="currentColor"
-                    viewBox="0 0 16 16"
+                <a href="https://t.me/MoleOfficialchannel" className="">
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    className="rounded-full border-white/20 text-white bg-white/10"
                   >
-                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
-                  </svg>
-                </Button>
-                <Button
-                  variant="outline"
-                  size="icon"
-                  className="rounded-full border-white/20 text-white bg-white/10"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    fill="currentColor"
-                    viewBox="0 0 16 16"
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 448 512"
+                      height="200px"
+                      width="200px"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"></path>
+                    </svg>
+                  </Button>
+                </a>
+
+                <a href="https://x.com/MoleSmash" className="">
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    className="rounded-full border-white/20 text-white bg-white/10"
                   >
-                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15" />
-                  </svg>
-                </Button>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15" />
+                    </svg>
+                  </Button>
+                </a>
+
                 <Button
                   variant="outline"
                   size="icon"
