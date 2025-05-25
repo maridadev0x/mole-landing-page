@@ -292,7 +292,7 @@ const Index = () => {
                 Total Supply
               </h3>
               <p className="text-3xl font-bold text-center text-game-blue">
-                1,000,000,000
+                10,000,000,000
               </p>
               <p className="text-gray-600 text-center">$MOLE Tokens</p>
             </div>
@@ -309,7 +309,7 @@ const Index = () => {
                 Initial Market Cap
               </h3>
               <p className="text-3xl font-bold text-center text-game-red">
-                $500,000
+                $0
               </p>
               <p className="text-gray-600 text-center">Fully Diluted: $10M</p>
             </div>
@@ -341,7 +341,7 @@ const Index = () => {
                 Initial Price
               </h3>
               <p className="text-3xl font-bold text-center text-game-yellow">
-                $0.01
+                $0
               </p>
               <p className="text-gray-600 text-center">Public Sale Price</p>
             </div>
