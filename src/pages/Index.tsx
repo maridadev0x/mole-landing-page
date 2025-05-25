@@ -58,17 +58,17 @@ const Index = () => {
   const teamMembers: TeamMember[] = [
     {
       name: "John Garner",
-      role: "CTO - SoftSix | Cake",
+      role: "CTO - SoftSix",
       image: "/imgs/John_Garner.jpg",
     },
     {
       name: "Tom Gilbert",
-      role: "CMO - Alpha Blockchain | Cake",
+      role: "CMO - Alpha Blockchain",
       image: "/imgs/Tom_Gilbert.jpg",
     },
     {
       name: "TRAN TUAN",
-      role: "CEO - CJD Tech | Cake",
+      role: "CEO - CJD Tech",
       image: "/imgs/TRAN_TUAN.jpg",
     },
   ];
