@@ -29,7 +29,6 @@ interface TeamMember {
   name: string;
   role: string;
   image: string;
-  href: string;
 }
 
 // Vesting schedule type
@@ -61,19 +60,16 @@ const Index = () => {
       name: "John Garner",
       role: "CTO - SoftSix | Cake",
       image: "/imgs/John_Garner.jpg",
-      href: "https://www.cake.me/me/john-garner",
     },
     {
       name: "Tom Gilbert",
       role: "CMO - Alpha Blockchain | Cake",
       image: "/imgs/Tom_Gilbert.jpg",
-      href: "https://www.cake.me/me/tom-gilbert",
     },
     {
       name: "TRAN TUAN",
       role: "CEO - CJD Tech | Cake",
       image: "/imgs/TRAN_TUAN.jpg",
-      href: "https://www.cake.me/me/tran-tuan-3be3fe",
     },
   ];
 
@@ -112,45 +108,45 @@ const Index = () => {
   // Partners and VCs data
   const partners: Partner[] = [
     {
-      name: "Crypto Ventures",
-      logo: "/imgs/avar8.jpg",
+      name: "milk-alliance",
+      logo: "/imgs/milk-alliance.png",
       type: "VC",
     },
     {
-      name: "GameFi Capital",
-      logo: "/imgs/avar5.jpg",
+      name: "bnb",
+      logo: "/imgs/bnb.png",
       type: "VC",
     },
     {
-      name: "Crypto Ventures",
-      logo: "/imgs/avar10.jpg",
+      name: "airian",
+      logo: "/imgs/airian.png",
       type: "VC",
     },
     {
-      name: "GameFi Capital",
-      logo: "/imgs/avar4.jpg",
+      name: "myro",
+      logo: "/imgs/myro.png",
       type: "VC",
     },
     {
-      name: "Telegram Games",
-      logo: "/imgs/avar10.jpg",
-      type: "Partner",
+      name: "playdapp",
+      logo: "/imgs/playdapp.png",
+      type: "VC",
     },
-    {
-      name: "Blockchain Alliance",
-      logo: "/imgs/avar10.jpg",
-      type: "Partner",
-    },
-    {
-      name: "Telegram Games",
-      logo: "/imgs/avar11.jpg",
-      type: "Partner",
-    },
-    {
-      name: "Blockchain Alliance",
-      logo: "/imgs/avar4.jpg",
-      type: "Partner",
-    },
+    // {
+    //   name: "Blockchain Alliance",
+    //   logo: "/imgs/avar10.jpg",
+    //   type: "Partner",
+    // },
+    // {
+    //   name: "Telegram Games",
+    //   logo: "/imgs/avar11.jpg",
+    //   type: "Partner",
+    // },
+    // {
+    //   name: "Blockchain Alliance",
+    //   logo: "/imgs/avar4.jpg",
+    //   type: "Partner",
+    // },
   ];
 
   useEffect(() => {
@@ -308,9 +304,7 @@ const Index = () => {
               <h3 className="text-xl font-bold mb-2 text-center">
                 Initial Market Cap
               </h3>
-              <p className="text-3xl font-bold text-center text-game-red">
-                $0
-              </p>
+              <p className="text-3xl font-bold text-center text-game-red">$0</p>
               <p className="text-gray-600 text-center">Fully Diluted: $10M</p>
             </div>
 
@@ -363,7 +357,7 @@ const Index = () => {
                 Community Incentives: 15%
               </div>
               <div className="bg-game-green text-white px-4 py-4 rounded-full">
-                Development Fund: 15%
+                Development & Investor : 15%
               </div>
               <div className="bg-game-yellow text-black px-4 py-4 rounded-full">
                 Liquidity & Exchange Listings: 10%
@@ -484,22 +478,20 @@ const Index = () => {
 
           <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
-              <a href={member.href} target="_blank" className="">
-                <div
-                  key={index}
-                  className="bg-white p-6 rounded-2xl shadow-lg text-center hover:shadow-xl transition-all duration-300"
-                >
-                  <div className="w-24 h-24 mx-auto rounded-full overflow-hidden mb-4 bg-gray-200">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                  <p className="text-game-blue">{member.role}</p>
+              <div
+                key={index}
+                className="bg-white p-6 rounded-2xl shadow-lg text-center hover:shadow-xl transition-all duration-300"
+              >
+                <div className="w-24 h-24 mx-auto rounded-full overflow-hidden mb-4 bg-gray-200">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-              </a>
+                <h3 className="text-xl font-bold mb-1">{member.name}</h3>
+                <p className="text-game-blue">{member.role}</p>
+              </div>
             ))}
           </div>
         </div>
@@ -516,30 +508,10 @@ const Index = () => {
           </p>
 
           <div className="mb-12">
-            <h3 className="text-2xl font-bold mb-8 text-center">
+            {/* <h3 className="text-2xl font-bold mb-8 text-center">
               Venture Capital Partners
-            </h3>
-            <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-8">
-              {teamMembers.map((member, index) => (
-                <a href={member.href} target="_blank" className="">
-                  <div
-                    key={index}
-                    className="bg-white p-6 rounded-2xl shadow-lg text-center hover:shadow-xl transition-all duration-300"
-                  >
-                    <div className="w-24 h-24 mx-auto rounded-full overflow-hidden mb-4 bg-gray-200">
-                      <img
-                        src={member.image}
-                        alt={member.name}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                    <p className="text-game-blue">{member.role}</p>
-                  </div>
-                </a>
-              ))}
-            </div>
-            {/* <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-8">
+            </h3> */}
+            <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-5 gap-8">
               {partners
                 .filter((p) => p.type === "VC")
                 .map((partner, index) => (
@@ -555,31 +527,26 @@ const Index = () => {
                     <h4 className="font-bold text-center">{partner.name}</h4>
                   </div>
                 ))}
-            </div> */}
+            </div>
           </div>
 
-          <div>
+          {/* <div>
             <h3 className="text-2xl font-bold mb-8 text-center">
               Strategic Partners
             </h3>
             <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-8">
               {teamMembers.map((member, index) => (
-                <a href={member.href} target="_blank" className="">
-                  <div
-                    key={index}
-                    className="bg-white p-6 rounded-2xl shadow-lg text-center hover:shadow-xl transition-all duration-300"
-                  >
-                    <div className="w-24 h-24 mx-auto rounded-full overflow-hidden mb-4 bg-gray-200">
-                      <img
-                        src={member.image}
-                        alt={member.name}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                    <p className="text-game-blue">{member.role}</p>
+                <div key={index} className="bg-white p-6 rounded-2xl shadow-lg text-center hover:shadow-xl transition-all duration-300">
+                  <div className="w-24 h-24 mx-auto rounded-full overflow-hidden mb-4 bg-gray-200">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                </a>
+                  <h3 className="text-xl font-bold mb-1">{member.name}</h3>
+                  <p className="text-game-blue">{member.role}</p>
+                </div>
               ))}
             </div>
             {/* <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-8">
@@ -598,8 +565,8 @@ const Index = () => {
                     <h4 className="font-bold text-center">{partner.name}</h4>
                   </div>
                 ))}
-            </div> */}
-          </div>
+            </div>
+          </div> */}
         </div>
       </section>
 
