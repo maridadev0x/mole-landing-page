@@ -517,7 +517,7 @@ const Index = () => {
                 .map((partner, index) => (
                   <div
                     key={index}
-                    className="bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center justify-center aspect-square"
+                    className="bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center justify-center aspect-square uppercase"
                   >
                     <img
                       src={partner.logo}
