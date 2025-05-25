@@ -4,6 +4,8 @@ import FeatureCard from "@/components/FeatureCard";
 import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { Roadmap } from "./Roadmap";
+import VestingChart from "./VestingChart";
+import VestingTable from "./VestingTable";
 import {
   Play,
   Star,
@@ -82,7 +84,8 @@ const Index = () => {
       percentage: "60%",
       amount: "6,000,000,000",
       timeline: "TGE Unlock		",
-      description: "Allocated to players earning MOLE tokens through in-game achievements and milestones.",
+      description:
+        "Allocated to players earning MOLE tokens through in-game achievements and milestones.",
       color: "border-red-500",
     },
     {
@@ -90,7 +93,8 @@ const Index = () => {
       percentage: "15%",
       amount: "1,500,000,000",
       timeline: "TGE Unlock	",
-      description: "Supports community growth through events, contests, and collaborations.",
+      description:
+        "Supports community growth through events, contests, and collaborations.",
       color: "border-blue-500",
     },
     {
@@ -98,7 +102,8 @@ const Index = () => {
       percentage: "15%",
       amount: "1,500,000,000",
       timeline: "TGE (+16M)	",
-      description: "Ensures ongoing game development, updates, and ecosystem enhancements.",
+      description:
+        "Ensures ongoing game development, updates, and ecosystem enhancements.",
       color: "border-green-500",
     },
     {
@@ -106,7 +111,8 @@ const Index = () => {
       percentage: "10%",
       amount: "1,000,000,000",
       timeline: "TGE Unlock		",
-      description: "Secures partnerships with centralized and decentralized exchanges for token accessibility.",
+      description:
+        "Secures partnerships with centralized and decentralized exchanges for token accessibility.",
       color: "border-yellow-500",
     },
   ];
@@ -345,7 +351,7 @@ const Index = () => {
               <img src="/imgs/molespace.png" alt="" className="" />
             </div>
           </div>
-{/* 
+          {/* 
           <div className="mt-20 mx-auto bg-white/90 p-10 rounded-2xl">
             <h3 className="text-2xl sm:text-4xl font-bold mb-8 text-center">
               Token Allocation Categories
@@ -379,7 +385,7 @@ const Index = () => {
       <section></section>
 
       {/* Vesting Schedule Section */}
-      <section className="py-24 bg-[#f1d8c4]" id="vesting">
+      <section className="pt-24 bg-[#f1d8c4]" id="vesting">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
             $MOLE Token Vesting Schedule
@@ -399,7 +405,9 @@ const Index = () => {
                   <h3 className="text-xl font-bold">{item.phase}</h3>
                 </div>
                 <div className="flex justify-between items-center mb-3">
-                  <span className="font-bold text-lg">{item.percentage}&nbsp;({item.amount})</span>
+                  <span className="font-bold text-lg">
+                    {item.percentage}&nbsp;({item.amount})
+                  </span>
                   <span className="text-sm bg-game-blue/10 text-game-blue px-3 py-1 rounded-full">
                     {item.timeline}
                   </span>
@@ -408,6 +416,10 @@ const Index = () => {
               </div>
             ))}
           </div>
+        </div>
+        <div className="container py-20 px-4 rounded-md">
+          <VestingChart />
+          <VestingTable />
         </div>
       </section>
 
@@ -503,9 +515,7 @@ const Index = () => {
           </p>
 
           <div className="mb-12">
-            <h3 className="text-2xl font-bold mb-8 text-center">
-              Partners
-            </h3>
+            <h3 className="text-2xl font-bold mb-8 text-center">Partners</h3>
             <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-5 gap-8">
               {partners
                 .filter((p) => p.type === "Partner")
@@ -526,9 +536,7 @@ const Index = () => {
           </div>
 
           <div>
-            <h3 className="text-2xl font-bold mb-8 text-center">
-              Investors
-            </h3>
+            <h3 className="text-2xl font-bold mb-8 text-center">Investors</h3>
             <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-2 gap-10 xm:gap-20 max-w-[700px] mx-auto">
               {partners
                 .filter((p) => p.type === "Investor")
@@ -662,7 +670,7 @@ const Index = () => {
           </div>
 
           <div className="mt-12 flex flex-col items-center xl:flex-row justify-center gap-6">
-            <div className="flex items-center">
+            {/* <div className="flex items-center">
               <Star className="text-game-yellow fill-game-yellow h-6 w-6 mr-1" />
               <Star className="text-game-yellow fill-game-yellow h-6 w-6 mr-1" />
               <Star className="text-game-yellow fill-game-yellow h-6 w-6 mr-1" />
@@ -670,7 +678,7 @@ const Index = () => {
               <Star className="text-game-yellow fill-game-yellow h-6 w-6" />
               <span className="ml-2 font-bold">4.8/5</span>
               <span className="ml-2 text-gray-500">(1,243 Reviews)</span>
-            </div>
+            </div> */}
             <span className="hidden xl:block text-gray-500">|</span>
             <div className="flex items-center">
               <Users className="h-6 w-6 mr-2 text-game-blue" />
@@ -772,10 +780,16 @@ const Index = () => {
                 >
                   Whitepaper
                 </a>
-                <a href="#team" className="text-sm text-gray-300 hover:text-white">
+                <a
+                  href="#team"
+                  className="text-sm text-gray-300 hover:text-white"
+                >
                   Team
                 </a>
-                <a href="https://drive.google.com/file/d/1QHywlp_Kzrjmxk9S7B82eCadw7asSBXw/view?usp=sharing" className="text-sm text-gray-300 hover:text-white">
+                <a
+                  href="https://drive.google.com/file/d/1QHywlp_Kzrjmxk9S7B82eCadw7asSBXw/view?usp=sharing"
+                  className="text-sm text-gray-300 hover:text-white"
+                >
                   Audit
                 </a>
               </div>
