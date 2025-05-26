@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 
 const roadmapData = [
   {
-    quarter: "Q1 2024: Project Foundation",
+    quarter: "Q2 2024: Project Foundation",
     status: "completed",
     items: [
       {
@@ -21,7 +21,7 @@ const roadmapData = [
     ]
   },
   {
-    quarter: "Q2 2024: Beta Game Launch",
+    quarter: "Q3 2024: Beta Game Launch",
     status: "completed",
     items: [
       {
@@ -39,7 +39,7 @@ const roadmapData = [
     ]
   },
   {
-    quarter: "Q3 2025: Full Game Launch",
+    quarter: "Q1 2025: Full Game Launch",
     status: "completed",
     items: [
       {
@@ -57,7 +57,7 @@ const roadmapData = [
     ]
   },
   {
-    quarter: "Q4 2025: DeFi Integration",
+    quarter: "Q2 2025: DeFi Integration",
     status: "upcoming",
     items: [
       {
@@ -75,7 +75,7 @@ const roadmapData = [
     ]
   },
   {
-    quarter: "Q4 2025: Cross-Platform Expansion",
+    quarter: "Q3 2025: Cross-Platform Expansion",
     status: "upcoming",
     items: [
       {
