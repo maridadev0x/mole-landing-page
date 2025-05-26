@@ -50,8 +50,8 @@ const VestingTable = () => {
                 <TableHead className="font-semibold text-green-400 font-mono">PERIOD</TableHead>
                 <TableHead className="font-semibold text-green-400 font-mono">DATE</TableHead>
                 <TableHead className="font-semibold text-green-400 font-mono">GAMEPLAY REWARDS</TableHead>
-                <TableHead className="font-semibold text-green-400 font-mono">COMMUNITY</TableHead>
-                <TableHead className="font-semibold text-green-400 font-mono">DEVELOPMENT</TableHead>
+                <TableHead className="font-semibold text-green-400 font-mono">COMMUNITY INCENTIVES</TableHead>
+                <TableHead className="font-semibold text-green-400 font-mono">DEVELOPMENT FUND & INVESTOR</TableHead>
                 <TableHead className="font-semibold text-green-400 font-mono">LIQUIDITY</TableHead>
                 <TableHead className="font-semibold text-green-400 font-mono">STATUS</TableHead>
               </TableRow>

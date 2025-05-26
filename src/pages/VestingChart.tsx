@@ -135,7 +135,7 @@ const VestingChart = () => {
           </div>
           <div className="flex items-center space-x-3">
             <div className="w-4 h-4 bg-green-300 rounded border border-green-200"></div>
-            <span className="text-gray-300 font-medium font-mono text-sm">DEVELOPMENT FUND</span>
+            <span className="text-gray-300 font-medium font-mono text-sm">DEVELOPMENT FUND & INVESTOR</span>
           </div>
           <div className="flex items-center space-x-3">
             <div className="w-4 h-4 bg-green-200 rounded border border-green-100"></div>

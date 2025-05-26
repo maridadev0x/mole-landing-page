@@ -81,7 +81,7 @@ const Index = () => {
   const vestingSchedule: VestingInfo[] = [
     {
       phase: "Gameplay Rewards",
-      percentage: "60%",
+      percentage: "60.00%",
       amount: "6,000,000,000",
       timeline: "TGE Unlock		",
       description:
@@ -90,7 +90,7 @@ const Index = () => {
     },
     {
       phase: "Community Incentives",
-      percentage: "15%",
+      percentage: "15.00%",
       amount: "1,500,000,000",
       timeline: "TGE Unlock	",
       description:
@@ -98,8 +98,8 @@ const Index = () => {
       color: "border-blue-500",
     },
     {
-      phase: "Community and public participants",
-      percentage: "15%",
+      phase: "Development Fund & Investor",
+      percentage: "15.00%",
       amount: "1,500,000,000",
       timeline: "TGE (+16M)	",
       description:
@@ -108,7 +108,7 @@ const Index = () => {
     },
     {
       phase: "Liquidity & Exchange Listings",
-      percentage: "10%",
+      percentage: "10.00%",
       amount: "1,000,000,000",
       timeline: "TGE Unlock		",
       description:
