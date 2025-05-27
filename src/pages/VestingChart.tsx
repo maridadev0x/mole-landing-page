@@ -3,17 +3,17 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 
 const VestingChart = () => {
   const chartData = [
-    { month: "TGE", gameplayRewards: 1000000000, communityIncentives: 250000000, developmentFund: 0, liquidity: 1000000000, total: 2250000000 },
-    { month: "TGE+6M", gameplayRewards: 1500000000, communityIncentives: 250000000, developmentFund: 0, liquidity: 1000000000, total: 2750000000 },
-    { month: "TGE+12M", gameplayRewards: 2000000000, communityIncentives: 500000000, developmentFund: 0, liquidity: 1000000000, total: 3500000000 },
-    { month: "TGE+16M", gameplayRewards: 2000000000, communityIncentives: 500000000, developmentFund: 40000000, liquidity: 1000000000, total: 3540000000 },
-    { month: "TGE+18M", gameplayRewards: 2500000000, communityIncentives: 500000000, developmentFund: 120000000, liquidity: 1000000000, total: 4120000000 },
-    { month: "TGE+24M", gameplayRewards: 3000000000, communityIncentives: 750000000, developmentFund: 360000000, liquidity: 1000000000, total: 5110000000 },
-    { month: "TGE+30M", gameplayRewards: 3500000000, communityIncentives: 750000000, developmentFund: 600000000, liquidity: 1000000000, total: 5850000000 },
-    { month: "TGE+36M", gameplayRewards: 4000000000, communityIncentives: 1000000000, developmentFund: 840000000, liquidity: 1000000000, total: 6840000000 },
-    { month: "TGE+42M", gameplayRewards: 4500000000, communityIncentives: 1000000000, developmentFund: 1080000000, liquidity: 1000000000, total: 7580000000 },
-    { month: "TGE+48M", gameplayRewards: 5000000000, communityIncentives: 1250000000, developmentFund: 1320000000, liquidity: 1000000000, total: 8570000000 },
-    { month: "TGE+54M", gameplayRewards: 5500000000, communityIncentives: 1250000000, developmentFund: 1485000000, liquidity: 1000000000, total: 9235000000 },
+    { month: "TGE", gameplayRewards: 500000000, communityIncentives: 0, developmentFund: 0, liquidity: 250000000, total: 750000000 },
+    { month: "TGE+6M", gameplayRewards: 1000000000, communityIncentives: 250000000, developmentFund: 0, liquidity: 500000000, total: 1750000000 },
+    { month: "TGE+12M", gameplayRewards: 1500000000, communityIncentives: 500000000, developmentFund: 0, liquidity: 750000000, total: 2750000000 },
+    { month: "TGE+16M", gameplayRewards: 1500000000, communityIncentives: 500000000, developmentFund: 40000000, liquidity: 750000000, total: 2790000000 },
+    { month: "TGE+18M", gameplayRewards: 2000000000, communityIncentives: 500000000, developmentFund: 120000000, liquidity: 750000000, total: 3370000000 },
+    { month: "TGE+24M", gameplayRewards: 2500000000, communityIncentives: 750000000, developmentFund: 360000000, liquidity: 750000000, total: 4610000000 },
+    { month: "TGE+30M", gameplayRewards: 3000000000, communityIncentives: 750000000, developmentFund: 600000000, liquidity: 750000000, total: 5350000000 },
+    { month: "TGE+36M", gameplayRewards: 3500000000, communityIncentives: 1000000000, developmentFund: 840000000, liquidity: 750000000, total: 6340000000 },
+    { month: "TGE+42M", gameplayRewards: 4500000000, communityIncentives: 1000000000, developmentFund: 1080000000, liquidity: 750000000, total: 7580000000 },
+    { month: "TGE+48M", gameplayRewards: 5000000000, communityIncentives: 1250000000, developmentFund: 1320000000, liquidity: 750000000, total: 8570000000 },
+    { month: "TGE+54M", gameplayRewards: 5500000000, communityIncentives: 1250000000, developmentFund: 1490000000, liquidity: 750000000, total: 9240000000 },
     { month: "TGE+59M", gameplayRewards: 6000000000, communityIncentives: 1500000000, developmentFund: 1500000000, liquidity: 1000000000, total: 10000000000 },
   ];
 

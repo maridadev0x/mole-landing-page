@@ -515,10 +515,10 @@ const Index = () => {
           </p>
 
           <div className="mb-12">
-            <h3 className="text-2xl font-bold mb-8 text-center">Partners</h3>
-            <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-5 gap-8">
+            {/* <h3 className="text-2xl font-bold mb-8 text-center">Partners</h3> */}
+            <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-12 md:gap-4 xm:gap-8 lg:gap-12">
               {partners
-                .filter((p) => p.type === "Partner")
+                .filter((p) => p.type === "Partner" || "Investor")
                 .map((partner, index) => (
                   <div
                     key={index}
@@ -527,7 +527,7 @@ const Index = () => {
                     <img
                       src={partner.logo}
                       alt={partner.name}
-                      className="w-24 h-24   mb-4 rounded-full"
+                      className="w-24 xm:w-32 h-24 xm:h-32 mb-4 rounded-full"
                     />
                     <h4 className="font-bold text-center">{partner.name}</h4>
                   </div>
@@ -535,7 +535,7 @@ const Index = () => {
             </div>
           </div>
 
-          <div>
+          {/* <div>
             <h3 className="text-2xl font-bold mb-8 text-center">Investors</h3>
             <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-2 gap-10 xm:gap-20 max-w-[700px] mx-auto">
               {partners
@@ -554,7 +554,7 @@ const Index = () => {
                   </div>
                 ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
