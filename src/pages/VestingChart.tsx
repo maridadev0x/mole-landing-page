@@ -142,7 +142,7 @@ const VestingChart = () => {
                     .replace(/([A-Z])/g, " $1")
                     .replace(/^./, (str) => str.toUpperCase())}: ${(
                     item.value / 1000000000
-                  ).toFixed(1)}B`}
+                  ).toFixed(2)}B`}
                 </p>
               ))}
           </div>
