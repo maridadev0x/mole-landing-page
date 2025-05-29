@@ -148,8 +148,8 @@ const VestingChart = () => {
                   x2="0"
                   y2="1"
                 >
-                  <stop offset="5%" stopColor="#6EE7B7" stopOpacity={0.8} />
-                  <stop offset="95%" stopColor="#6EE7B7" stopOpacity={0.1} />
+                  <stop offset="5%" stopColor={tokenCategories.developmentFund.color} stopOpacity={0.8} />
+                  <stop offset="95%" stopColor={tokenCategories.developmentFund.color} stopOpacity={0.1} />
                 </linearGradient>
                 <linearGradient
                   id="liquidityGradient"
